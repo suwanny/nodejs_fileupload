@@ -4,16 +4,27 @@
 <head>
   <title>S3 File Uploader</title>
   <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.css">
-  <link href="/css/global.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="/bower_components/dropzone/dist/basic.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/dropzone/dist/dropzone.css">
 </head>
 <body>
-  <div class="container">
-    <h1>S3 File Uploader</h1>
-  </div>
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="/bower_components/canjs/can.jquery.js"></script>
   <script src="/bower_components/lodash/dist/lodash.js"></script>
+  <script src="/bower_components/dropzone/dist/dropzone.js"></script>
+
+  <section>
+    <h1 id="try-it-out">Try it out!</h1>
+    <div id="dropzone">
+      <form action="/file-upload" class="dropzone" id="file-upload">
+        <div class="dz-message">
+          "Drop files here or click to upload"
+          <br>
+        </div>
+      </form>
+    </div>
+  </section>
 </body>
 
 </html>
