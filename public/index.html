@@ -13,11 +13,22 @@
   <script src="/bower_components/canjs/can.jquery.js"></script>
   <script src="/bower_components/lodash/dist/lodash.js"></script>
   <script src="/bower_components/dropzone/dist/dropzone.js"></script>
-
+  <script>
+    Dropzone.options.myFileUpload = {
+      paramName: "file", // The name that will be used to transfer the file
+      maxFilesize: 2000, // MB
+      accept: function(file, done) {
+        if (file.name == "justinbieber.jpg") {
+          done("Naha, you don't.");
+        }
+        else { done(); }
+      }
+    };
+  </script>
   <section>
     <h1 id="try-it-out">Try it out!</h1>
     <div id="dropzone">
-      <form action="/file-upload" class="dropzone" id="file-upload">
+      <form action="files/file-upload" class="dropzone" id="myFileUpload" enctype="multipart/form-data">
         <div class="dz-message">
           "Drop files here or click to upload"
           <br>
