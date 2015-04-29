@@ -13,5 +13,5 @@ app.use(responseTime());
 app.use(bodyParser.json()); // pull information from html in POST
 app.use('/files', require('./lib/files'));
 
-app.listen(listenPort);
+app.listen(listenPort, '127.0.0.1');
 console.log('Magic happens on port ' + listenPort);      // shoutout to the user
